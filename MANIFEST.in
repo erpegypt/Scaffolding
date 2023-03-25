@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include ecs_rent *.css
+recursive-include ecs_rent *.csv
+recursive-include ecs_rent *.html
+recursive-include ecs_rent *.ico
+recursive-include ecs_rent *.js
+recursive-include ecs_rent *.json
+recursive-include ecs_rent *.md
+recursive-include ecs_rent *.png
+recursive-include ecs_rent *.py
+recursive-include ecs_rent *.svg
+recursive-include ecs_rent *.txt
+recursive-exclude ecs_rent *.pyc
