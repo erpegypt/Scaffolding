@@ -50,28 +50,11 @@ def on_submit(doc, method=None):
     
 @frappe.whitelist()
 def on_cancel(doc, method=None):
-    for d in doc.item:
+    doc.ignore_linked_doctypes = ["Rent","Payment Ledger Entry"]
+    for d in doc.items:
         frappe.db.sql(f"""
             update `tabRent Detail` set returned = 0 and returen_date = '' and sales_invoice = '' where name = '{d.rent_detail}'
         """)
-    links = frappe.get_all(
-    "Dynamic Link",
-    filters={"link_doctype": doc.doctype, "link_name": doc.name},
-    fields=["parent", "parenttype"],
-    )
-    for link in links:
-        linked_doc = frappe.get_doc(link["parenttype"], link["parent"])
-
-        if len(linked_doc.get("links")) == 1:
-            linked_doc.delete(ignore_permissions=True)
-        else:
-            to_remove = None
-        for d in linked_doc.get("links"):
-            if d.link_doctype == doc.doctype and d.link_name == doc.name:
-                to_remove = d
-            if to_remove:
-                linked_doc.remove(to_remove)
-                linked_doc.save(ignore_permissions=True)
 
 
 @frappe.whitelist()

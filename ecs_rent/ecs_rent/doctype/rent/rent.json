@@ -216,10 +216,13 @@
    "options": "Warehouse"
   },
   {
+   "default": "\u0639\u0645\u0644\u0627\u0621 - EA",
+   "fetch_from": "customer.warehouse",
    "fieldname": "target_warehouse",
    "fieldtype": "Link",
    "label": "Target Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "read_only": 1
   },
   {
    "fieldname": "price_per_day_or_month",
@@ -257,7 +260,7 @@
    "link_fieldname": "rent"
   }
  ],
- "modified": "2023-04-04 21:57:44.347771",
+ "modified": "2023-04-12 12:05:12.810158",
  "modified_by": "Administrator",
  "module": "Ecs Rent",
  "name": "Rent",

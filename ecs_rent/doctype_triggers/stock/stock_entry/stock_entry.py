@@ -23,7 +23,7 @@ def on_submit(doc, method=None):
     pass
 @frappe.whitelist()
 def on_cancel(doc, method=None):
-    pass
+    doc.ignore_linked_doctypes = ["Rent","Stock Ledger Entry","Repost Item Valuation"]
 @frappe.whitelist()
 def on_update_after_submit(doc, method=None):
     pass

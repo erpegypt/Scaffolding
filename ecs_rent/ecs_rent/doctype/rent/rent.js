@@ -15,7 +15,9 @@ frappe.ui.form.on("Rent", {
 					"rent": frm.doc.name,
 					"customer": frm.doc.customer,
 					"branch": frm.doc.branch,
-					"cost_center": frm.doc.cost_center
+					"cost_center": frm.doc.cost_center,
+					"from_warehouse": frm.doc.target_warehouse,
+					"to_warehouse": frm.doc.source_warehouse
 				};
 				frappe.new_doc("Sales Invoice");
 			}, __("Create"));
