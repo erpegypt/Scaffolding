@@ -90,7 +90,7 @@
   {
    "fetch_from": "customer.mobile_no",
    "fieldname": "mobile_no",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Mobile_no"
   },
   {
@@ -259,7 +259,7 @@
    "link_fieldname": "rent"
   }
  ],
- "modified": "2023-04-12 16:56:36.811144",
+ "modified": "2023-04-12 17:58:27.362112",
  "modified_by": "Administrator",
  "module": "Ecs Rent",
  "name": "Rent",
