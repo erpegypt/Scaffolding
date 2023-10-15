@@ -7,9 +7,11 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "source_warehouse",
   "item_code",
   "item_name",
   "qty",
+  "actual_qty",
   "uom",
   "rate",
   "amount",
@@ -20,6 +22,7 @@
   "expected_days",
   "to_time",
   "returned",
+  "return_qty",
   "returen_date",
   "total_days",
   "base_billing_amount",
@@ -46,8 +49,7 @@
    "fieldname": "rate",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Rate",
-   "read_only": 1
+   "label": "Rate"
   },
   {
    "default": "Today",
@@ -138,11 +140,30 @@
    "fieldtype": "Link",
    "label": "Income Account",
    "options": "Account"
+  },
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "actual_qty",
+   "fieldtype": "Float",
+   "label": "Actual Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "return_qty",
+   "fieldtype": "Float",
+   "label": "Return Qty",
+   "read_only": 1
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2023-04-06 11:44:30.446190",
+ "modified": "2023-04-17 11:32:07.382099",
  "modified_by": "Administrator",
  "module": "Ecs Rent",
  "name": "Rent Detail",

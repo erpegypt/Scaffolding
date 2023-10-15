@@ -612,6 +612,15 @@ doc_events = {
 		"before_save": "ecs_rent.doctype_triggers.stock.website_item.website_item.before_save",
 		"on_update": "ecs_rent.doctype_triggers.stock.website_item.website_item.on_update",
 	},
+	"Auto Repeat": {
+		"before_insert": "ecs_rent.doctype_triggers.automation.auto_repeat.before_insert",
+		"after_insert": "ecs_rent.doctype_triggers.automation.auto_repeat.after_insert",
+		"onload": "ecs_rent.doctype_triggers.automation.auto_repeat.onload",
+		"before_validate": "ecs_rent.doctype_triggers.automation.auto_repeat.before_validate",
+		"validate": "ecs_rent.doctype_triggers.automation.auto_repeat.validate",
+		"before_save": "ecs_rent.doctype_triggers.automation.auto_repeat.before_save",
+		"on_update": "ecs_rent.doctype_triggers.automation.auto_repeat.on_update",
+	},
 }
 doctype_js = {
 	"Journal Entry" : "ecs_rent/doctype_triggers/accounting/journal_entry/journal_entry.js",
