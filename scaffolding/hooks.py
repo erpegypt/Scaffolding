@@ -2,11 +2,11 @@ from . import __version__ as app_version
 
 scaffolding = "scaffolding"
 app_title = "scaffolding"
-app_publisher = "erpcloud.systems"
-app_description = "customizations"
+app_publisher = "connect4systems.com"
+app_description = "Rent App"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "info@erpcloud.systems"
+app_email = "info@connect4systems.com"
 app_license = "MIT"
 
 
