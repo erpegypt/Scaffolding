@@ -3,5 +3,5 @@
 *.egg-info
 *.swp
 tags
-ecs_rent/docs/current
+scaffolding/docs/current
 node_modules/

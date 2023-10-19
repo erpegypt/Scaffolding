@@ -3,15 +3,15 @@ from setuptools import setup, find_packages
 with open("requirements.txt") as f:
 	install_requires = f.read().strip().split("\n")
 
-# get version from __version__ variable in ecs_rent/__init__.py
+# get version from __version__ variable in scaffolding/__init__.py
 from ecs_rent import __version__ as version
 
 setup(
-	name="ecs_rent",
+	name="scaffolding",
 	version=version,
-	description="Customization",
-	author="ECS",
-	author_email="info@erpcloud.systems",
+	description="scaffolding Rent and Sales Operation",
+	author="Connect4systems",
+	author_email="info@connect4systems.com",
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,
